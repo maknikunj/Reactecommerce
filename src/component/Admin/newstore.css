@@ -1,0 +1,304 @@
+.newStoreContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(221, 221, 221);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  flex-direction: column;
+  height: 150vh;
+}
+ .newStoreContainer h1 { 
+  color: rgba(0, 0, 0, 0.733);
+  font: 300 2rem "Roboto";
+  text-align: center;
+} 
+.coupaninput{
+  border: 1px solid red !important; 
+}
+
+
+.createStoreForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 5vmax;
+  justify-content: space-evenly;
+  height: 150%;
+  width: 90vh;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+}
+
+.createStoreForm > div {
+  display: flex;
+  width: 100%;
+  height: 200%;
+  align-items: center;
+}
+.createStoreForm > div > input,
+.createStoreForm > div > select,
+.createStoreForm > div > textarea {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 0.9vmax cursive;
+  outline: none;
+}
+
+.createStoreForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+#createStoreFormFile > input {
+  display: flex;
+  padding: 0%;
+}
+
+#createStoreFormFile > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 5vh;
+  border: none;
+  margin: 0%;
+  font: 400 0.8vmax cursive;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(255, 255, 255);
+}
+
+#createStoreFormFile > input::file-selector-button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+#createStoreFormImage {
+  width: 100%;
+  overflow: auto;
+}
+
+#createStoreFormImage > img {
+  width: 3vmax;
+  margin: 0 0.5vmax;
+}
+#createStoreBtn {
+  border: none;
+  background-color: tomato;
+  color: white;
+  font: 300 0.9vmax "Roboto";
+  width: 40%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+.createStoreBtn>Button{
+  margin-left: 15pc;
+  margin-top: 15pc;
+  width: 40pc;
+}
+
+#createStoreBtn:not(.disable-class):hover {
+  background-color: rgb(179, 66, 46);
+}
+
+#createStoreBtn:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+@media screen and (max-width: 600px) {
+  .newProductContainer {
+    background-color: rgb(255, 255, 255);
+  }
+  .createStoreForm {
+    padding: 5vmax;
+  }
+
+  .createStoreForm > div > input,
+  .createStoreForm > div > select,
+  .createStoreForm > div > textarea {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax cursive;
+  }
+
+  .createStoreForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  #createStoreFormFile > img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+  #createStoreFormFile > input::file-selector-button {
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 5vh;
+    border: none;
+    margin: 0%;
+    font: 400 0.8vmax cursive;
+    transition: all 0.5s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.623);
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.219);
+    font: 400 1.8vmax cursive;
+    border-radius: 100%;
+  }
+  
+  #createStoreFormFile > input::file-selector-button:hover {
+    background-color: rgb(235, 235, 235);
+  }
+
+}
+
+
+/* Toggle switch */
+
+.container {
+  text-align: center;
+  }
+  .toggle-switch {
+  position: relative;
+  width: 75px;
+  display: inline-block;
+  text-align: left;
+  top: 8px;
+  
+  }
+  .checkbox {
+  display: none;
+  }
+  .label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+  }
+  .inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+  }
+  .inner:before,
+  .inner:after {
+  float: left;
+  width: 50%;
+  height: 36px;
+  padding: 0;
+  line-height: 36px;
+  color: #fff;
+  font-weight: bold;
+  box-sizing: border-box;
+  }
+  .inner:before {
+  content: "Enable";
+  padding-left: 10px;
+  background-color: #060;
+  color: #fff;
+  }
+  .inner:after {
+  content: "Disable";
+  padding-right: 10px;
+  background-color: #bbb;
+  color: #fff;
+  text-align: right;
+  }
+  .switch {
+  display: block;
+  width: 24px;
+  margin: 5px;
+  /* background: #fff; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 40px;
+  border: 0 solid #bbb;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+  }
+  .checkbox:checked + .label .inner {
+  margin-left: 0;
+  }
+  .checkbox:checked + .label .switch {
+  right: 0px;
+  }
+
+  .maindiv{
+    float: left;
+    width: 300%;
+  }
+  
+  .storeform{
+    float: left;
+    width: 50%;
+    height: 95%;
+  }
+  .storeform>h1{
+    margin-right: 4.5pc;
+    color: rgba(0, 0, 0, 0.733);
+    font: 300 2rem "Roboto";
+    text-align: center;
+  }
+  .storeform>div{
+    display: flex;
+    width: 150%;
+    height: 4%;
+    align-items: center;
+    padding-top:60px;
+  }
+  .storeform>div>input,
+  .storeform>div>select,
+  .storeform>div>textarea{
+    display: flex;
+    width: 50%;
+    height: 150%;
+    align-items: center;
+  }
+  .ownerform{
+    float: right;
+    width: 50%;
+    height: 95%;
+  }
+  .ownerform>h1{
+    margin-right: 4.5pc;
+    color: rgba(0, 0, 0, 0.733);
+    font: 300 2rem "Roboto";
+    text-align: center;
+  }
+  .ownerform>div{
+    display: flex;
+    width: 150%;
+    height: 4%;
+    align-items: center;
+    padding-top:50px;
+  }
+  .ownerform>div>input,
+  .ownerform>div>select,
+  .ownerform>div>textarea{
+    display: flex;
+    width: 50%;
+    height: 150%;
+    align-items: center;
+   
+  }
+  
+  .creationdate{
+    margin-left: 0.8pc;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.733);
+  }
+  

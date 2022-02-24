@@ -1,0 +1,237 @@
+.newProductContainer {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(221, 221, 221);
+    border-left: 1px solid rgba(0, 0, 0, 0.158);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .newProductContainer h1 {
+    color: rgba(0, 0, 0, 0.733);
+    font: 300 2rem "Roboto";
+    text-align: center;
+  }
+  .coupaninput{
+    border: 1px solid red !important; 
+  }
+  
+  
+  .createProductForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 200%;
+    width: 40vh;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+  }
+  
+  .createProductForm > div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  .createProductForm > div > input,
+  .createProductForm > div > select,
+  .createProductForm > div > textarea {
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font: 300 0.9vmax cursive;
+    outline: none;
+  }
+  
+  .createProductForm > div > svg {
+    position: absolute;
+    transform: translateX(1vmax);
+    font-size: 1.6vmax;
+    color: rgba(0, 0, 0, 0.623);
+  }
+  
+  #createProductFormFile > input {
+    display: flex;
+    padding: 0%;
+  }
+  
+  #createProductFormFile > input::file-selector-button {
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 5vh;
+    border: none;
+    margin: 0%;
+    font: 400 0.8vmax cursive;
+    transition: all 0.5s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.623);
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #createProductFormFile > input::file-selector-button:hover {
+    background-color: rgb(235, 235, 235);
+  }
+  
+  #createProductFormImage {
+    width: 100%;
+    overflow: auto;
+  }
+  
+  #createProductFormImage > img {
+    width: 3vmax;
+    margin: 0 0.5vmax;
+  }
+  #createProductBtn {
+    border: none;
+    background-color: tomato;
+    color: white;
+    font: 300 0.9vmax "Roboto";
+    width: 100%;
+    padding: 0.8vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+  }
+  
+  #createProductBtn:not(.disable-class):hover {
+    background-color: rgb(179, 66, 46);
+  }
+  
+  #createProductBtn:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+  }
+
+  @media screen and (max-width: 600px) {
+    .newProductContainer {
+      background-color: rgb(255, 255, 255);
+    }
+    .createProductForm {
+      padding: 5vmax;
+    }
+  
+    .createProductForm > div > input,
+    .createProductForm > div > select,
+    .createProductForm > div > textarea {
+      padding: 2.5vmax 5vmax;
+      font: 300 1.7vmax cursive;
+    }
+  
+    .createProductForm > div > svg {
+      font-size: 2.8vmax;
+    }
+  
+    #createProductFormFile > img {
+      width: 8vmax;
+      border-radius: 100%;
+    }
+  
+    #createProductFormFile > input::file-selector-button {
+      height: 7vh;
+      font: 400 1.8vmax cursive;
+    }
+  
+    #createProductBtn {
+      font: 300 1.9vmax "Roboto";
+      padding: 1.8vmax;
+    }
+  }
+  
+
+  /* Toggle switch */
+
+  .container {
+    text-align: center;
+    }
+    .toggle-switch {
+    position: relative;
+    width: 75px;
+    display: inline-block;
+    text-align: left;
+    top: 8px;
+    
+    }
+    .checkbox {
+    display: none;
+    }
+    .label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0 solid #bbb;
+    border-radius: 20px;
+    }
+    .inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    }
+    .inner:before,
+    .inner:after {
+    float: left;
+    width: 50%;
+    height: 36px;
+    padding: 0;
+    line-height: 36px;
+    color: #fff;
+    font-weight: bold;
+    box-sizing: border-box;
+    }
+    .inner:before {
+    content: "Enable";
+    padding-left: 10px;
+    background-color: #060;
+    color: #fff;
+    }
+    .inner:after {
+    content: "Disable";
+    padding-right: 10px;
+    background-color: #bbb;
+    color: #fff;
+    text-align: right;
+    }
+    .switch {
+    display: block;
+    width: 24px;
+    margin: 5px;
+    /* background: #fff; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 40px;
+    border: 0 solid #bbb;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+    }
+    .checkbox:checked + .label .inner {
+    margin-left: 0;
+    }
+    .checkbox:checked + .label .switch {
+    right: 0px;
+    }
+    .storeform{
+      float: left;
+      width: 50%;
+    }
+    .ownerform{
+      float: right;
+      width: 50%;
+    }
+    .maindiv{
+      float: left;
+      width: 100%;
+    }
+    .creationdate{
+      margin-left: 0.8pc;
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.733);
+    }

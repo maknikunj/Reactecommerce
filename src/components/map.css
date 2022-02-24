@@ -1,0 +1,12 @@
+.form-group {
+    padding-top: 10px;
+}
+.form-group label{
+    font-size: 30px;
+}
+.form-group input{
+    width: 40pc;
+    height: 40px;
+    font-size: 20px;
+    margin-left: 1pc;
+}
